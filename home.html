@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-CESA Website</title>
     <link rel="stylesheet" href="home.css">
+    <script src="home.js">
+    </script>
 </head>
 <body>
     <div class="navbar-container">
@@ -13,9 +15,9 @@
             <div class="navbar-title">
                 <h1>E-CESA</h1>
                 <ul class="navbar-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="/home.html">Home</a></li>
+                    <li><a href="/events.html">Events</a></li>
+                    <li><a href="/contact.html">Contact us</a></li>
                     <li><a href="#">NoteMate<sup>®</sup></a></li>                
                 </ul>
             </div>
@@ -24,9 +26,46 @@
     <div class="content">
         <div class="welcome-section">
             <h5>Welcome</h5>
-            <h1>Welcome to,<br> E-CESA KJSCE</h1>
+            <h1>Welcome to,<br> e-CESA KJSCE</h1>
             <p>Your one stop for all resources and notes :)</p>
             <button onclick="location.href='#about-us'">Explore</button>
         </div>
+    </div>
+    <div id="about-us" class="about-us-section">
+        <h2>About Us</h2>
+        <p>We are the e-CESA team at KJSCE, dedicated to providing students with the best resources and notes to help them excel in their studies. Our mission is to create a supportive and resourceful environment for all students.</p>
+    </div>
+    <div id="meet-our-members" class="meet-our-members-section">
+        <h2>Meet Our Members</h2>
+        <label for="year-select">Select Year:</label>
+        <select id="year-select" name="year-select" onchange="updateDescription()">
+            <option value="24-25">24-25</option>
+            <option value="23-24">23-24</option>
+            <option value="22-23">22-23</option>
+            <option value="21-22">21-22</option>
+            <option value="20-21">20-21</option>
+            <option value="19-20">19-20</option>
+            <option value="18-19">18-19</option>
+            <option value="17-18">17-18</option>
+            <option value="16-17">16-17</option>
+            <option value="15-16">15-16</option>
+        </select>
+        <div id="description" class="description">
+            <p id="24-25" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 24-25</p>
+            <p id="23-24" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 23-24</p>
+            <p id="22-23" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 22-23</p>
+            <p id="21-22" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 21-22</p>
+            <p id="20-21" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 20-21</p>
+            <p id="19-20" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 19-20</p>
+            <p id="18-19" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 18-19</p>
+            <p id="17-18" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 17-18</p>
+            <p id="16-17" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 16-17</p>
+            <p id="15-16" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 15-16</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>e-CESA KJSCE ❤️</p>
+        <p>&copy; 2024-25 e-CESA. All rights reserved.</p>
+    </div>
 </body>
 </html>
