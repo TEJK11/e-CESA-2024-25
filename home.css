@@ -4,7 +4,7 @@ body {
     margin: 0;
     height: 100vh;
     font-family: 'Kanit', sans-serif;
-    background: linear-gradient(to right, #1b77a1, #2044e4);
+    background:  linear-gradient(to right, #1b77a1, #2044e4, #170f4f, #8114e8);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
     color: #ffffff; 
@@ -21,6 +21,8 @@ body {
         background-position: 0% 50%;
     }
 }
+
+
 
 .navbar-container {
     width: 100%;
@@ -64,6 +66,13 @@ body {
     transition: background-color 0.3s, transform 0.3s; 
 }
 
+.navbar-links a sup {
+    vertical-align: top;
+    font-size: 10px;
+    position: relative;
+    top: -0.3em;
+}
+
 .navbar-links a:hover {
     background-color: #12aef1;
     transform: scale(1.1); 
@@ -95,13 +104,13 @@ body {
     color: inherit;
 }
 
-
 .content {
     padding: 20px;
     text-align: center;
     font-size: 18px;
     line-height: 1.6;
 }
+
 
 .main-content {
     display: flex;
@@ -120,7 +129,7 @@ body {
 }
 
 .welcome-section h5 {
-    color: #00b3ff;
+    color: #c2bfd0;
     font-size: 18px;
     margin-bottom: 10px;
 }
@@ -136,6 +145,7 @@ body {
     font-size: 18px;
     margin: 20px 0;
 }
+
 button {
     background-color: #2044e4;
     color: #ffffff;
@@ -144,14 +154,19 @@ button {
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #2065c5;
 }
 
 button:hover {
     background-color: #12aef1;
     transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
+
 button:active {
     background-color: #3fd5ff;
     transform: scale(0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
