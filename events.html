@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="events.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -15,38 +15,38 @@
                 <ul class="navbar-links">
                     <li><a href="/home.html">Home</a></li>
                     <li><a href="/events.html">Events</a></li>
-                    <li><a href="/contact.html">Contact us</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
                     <li><a href="#">NoteMate<sup>®</sup></a></li>                
                 </ul>
             </div>
         </nav>
     </div>
-    <div class="flowchart">
-        <div class="event">
-            <h2>Event 1: Orientation</h2>
-            <p>Date: January 10, 2024</p>
-            <p>Description: Welcome and orientation for new members.</p>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <select id="month-select" onchange="updateCalendar()">
+                <option value="2024-08">August 2024</option>
+                <option value="2024-09">September 2024</option>
+                <option value="2024-10">October 2024</option>
+                <option value="2024-11">November 2024</option>
+                <option value="2024-12">December 2024</option>
+                <option value="2025-01">January 2025</option>
+                <option value="2025-02">February 2025</option>
+                <option value="2025-03">March 2025</option>
+                <option value="2025-04">April 2025</option>
+            </select>
+            <h2 id="calendar-title">August 2024</h2>
         </div>
-        <div class="event">
-            <h2>Event 2: Workshop on AI</h2>
-            <p>Date: February 15, 2024</p>
-            <p>Description: A hands-on workshop on Artificial Intelligence.</p>
+        <div class="calendar" id="calendar">
         </div>
-        <div class="event">
-            <h2>Event 3: Hackathon</h2>
-            <p>Date: March 20, 2024</p>
-            <p>Description: A 24-hour coding competition.</p>
-        </div>
-        <div class="event">
-            <h2>Event 4: Guest Lecture</h2>
-            <p>Date: April 25, 2024</p>
-            <p>Description: A lecture by an industry expert.</p>
-        </div>
-        <div class="event">
-            <h2>Event 5: Annual Meetup</h2>
-            <p>Date: May 30, 2024</p>
-            <p>Description: Annual meetup and networking event.</p>
-        </div>
+    </div>
+    <div id="event-details" class="event-details">
+        <img id="event-image" src="" alt="Event Image">
+        <p id="event-description"></p>
+    </div>
+    <script src="events.js"></script>
+    <div class="footer">
+        <p>e-CESA KJSCE ❤️</p>
+        <p>&copy; 2024-25 e-CESA. All rights reserved.</p>
     </div>
 </body>
 </html>

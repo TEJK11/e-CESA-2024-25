@@ -1,8 +1,18 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const yearSelect = document.getElementById('year-select');
+    yearSelect.value = '24-25';
+    updateDescription();
+});
 function updateDescription() {
-    const years = ["2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014"];
-    const selectedYear = document.getElementById("year-select").value;
-    
-    years.forEach(year => {
-        document.getElementById(year).style.display = year === selectedYear ? "block" : "none";
+    const yearSelect = document.getElementById('year-select');
+    const selectedYear = yearSelect.value;
+    const descriptions = document.querySelectorAll('.description > div, .description > p');
+
+    descriptions.forEach(description => {
+        if (description.id === selectedYear) {
+            description.style.display = 'block';
+        } else {
+            description.style.display = 'none';
+        }
     });
 }
