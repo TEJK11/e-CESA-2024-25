@@ -4,7 +4,7 @@ body {
     margin: 0;
     height: 100vh;
     font-family: 'Kanit', sans-serif;
-    background:  linear-gradient(to right, #1b77a1, #2044e4, #170f4f, #8114e8);
+    background: linear-gradient(to right, #1b77a1, #2044e4, #170f4f, #8114e8);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
     color: #ffffff; 
@@ -24,18 +24,18 @@ body {
 
 .navbar-container {
     width: 100%;
-    padding: 20px 20px;
+    padding: 1.25rem 1.25rem;
     display: flex;
     flex-direction: row !important;
     align-items: center;
-    margin: 0px;
+    margin: 0;
     justify-content: space-between;
 }
 
 .navbar-title h1 {
     margin: 0;
-    padding: 8px 16px;
-    font-size: 24px;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #ffffff;
 }
@@ -43,30 +43,30 @@ body {
 .navbar-links {
     list-style: none;
     margin: 0;
-    padding: 0 10px;
+    padding: 0 0.625rem;
     display: flex;
     flex-direction: row !important;
-    gap: 20px;
+    gap: 1.25rem;
     margin-left: auto;
 }
 
 .navbar-links li {
-    margin-left: 20px;
+    margin-left: 1.25rem;
 }
 
 .navbar-links a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
     text-align: right;
     transition: background-color 0.3s, transform 0.3s; 
 }
 
 .navbar-links a sup {
     vertical-align: top;
-    font-size: 10px;
+    font-size: 0.625rem;
     position: relative;
     top: -0.3em;
 }
@@ -90,7 +90,7 @@ body {
 .navbar-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .navbar-links li {
@@ -103,46 +103,43 @@ body {
 }
 
 .calendar-container {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
+    max-width: 56.25rem;
+    margin: 1.875rem auto;
+    padding: 1.25rem;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .calendar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
+    font-size: 1.5rem; /* Match font size with calendar title */
+    color: #333; /* Match color with calendar title */
 }
 
 .calendar-header select {
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.calendar-header h2 {
-    font-size: 24px;
-    margin: 0;
-    color: #333;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.3125rem;
+    border: 0.0625rem solid #ccc;
 }
 
 .calendar {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .calendar-day.day-header {
     background-color: #3f51b5;
     color: white;
     font-weight: bold;
-    padding: 10px 0;
-    border-radius: 5px;
+    padding: 0.625rem 0;
+    border-radius: 0.3125rem;
     text-align: center;
 }
 
@@ -153,12 +150,14 @@ body {
 
 .calendar-day.day-cell {
     background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
+    border: 0.0625rem solid #ddd;
+    border-radius: 0.3125rem;
+    padding: 0.9375rem;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    color: black; /* Set text color to black */
+    height: 5rem; /* Ensure all date boxes have the same height */
 }
 
 .calendar-day.day-cell:hover {
@@ -174,37 +173,69 @@ body {
 .calendar-day.event::after {
     content: attr(data-event);
     display: block;
-    margin-top: 10px;
-    font-size: 12px;
+    margin-top: 0.625rem;
+    font-size: 0.75rem;
     color: #f57f17;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
 }
 
 .event-details {
     display: none;
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
+    max-width: 56.25rem;
+    margin: 1.875rem auto;
+    padding: 1.25rem;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
     text-align: center;
+    position: absolute;
+    top: 17.5rem;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
 
 .event-details img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 0.625rem;
+    margin-bottom: 1.25rem;
 }
 
 .event-details p {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #333;
 }
+
+.close-button {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
 .footer {
     color: #ffffff;
     text-align: center;
-    padding: 10px 0;
+    padding: 0.625rem 0;
     width: 100%;
     bottom: 0;
 }

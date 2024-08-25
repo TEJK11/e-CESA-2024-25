@@ -34,16 +34,24 @@ function updateCalendar() {
 
     // Sample Events Data
     const events = {
-        "2024-08-10": {
+        "2024-10-10": {
             image: "https://via.placeholder.com/600x400?text=Event+1",
-            description: "Description of Event 1."
+            description: "Join us for an exciting workshop on AI and Machine Learning. Explore the latest trends and innovations in the field."
         },
         "2024-08-20": {
             image: "https://via.placeholder.com/600x400?text=Event+2",
-            description: "Description of Event 2."
+            description: "Participate in our annual hackathon! Team up, code, and compete for exciting prizes."
         },
-        // Add more events
+        "2024-08-31": {
+            image: "https://via.placeholder.com/600x400?text=Event+3",
+            description: "Attend the keynote session on the future of technology with renowned industry leaders."
+        },
+        "2024-09-05": {
+            image: "https://via.placeholder.com/600x400?text=Event+4",
+            description: "Celebrate Teachers' Day with us. A day filled with gratitude and appreciation for our mentors."
+        }
     };
+    
     for (let day = 1; day <= daysInMonth; day++) {
         const dayCell = document.createElement('div');
         dayCell.classList.add('calendar-day', 'day-cell');
@@ -62,21 +70,34 @@ function updateCalendar() {
     }
 }
 
-function showEventDetails(imageSrc, description) {
-    const eventDetails = document.getElementById('event-details');
-    const eventImage = document.getElementById('event-image');
-    const eventDescription = document.getElementById('event-description');
-
-    eventImage.src = imageSrc;
-    eventDescription.textContent = description;
-
-    eventDetails.style.display = 'block';
-}
 document.addEventListener('DOMContentLoaded', function() {
-    const monthSelector = document.getElementById('month-selector');
-    const eventDetails = document.querySelector('.event-details');
+    const eventDetails = document.getElementById('event-details');
+    const closeEventDetailsButton = document.getElementById('close-event-details');
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    document.body.appendChild(overlay);
 
-    monthSelector.addEventListener('change', function() {
+    document.querySelectorAll('.calendar-day.day-cell').forEach(dayCell => {
+        dayCell.addEventListener('click', function() {
+            const eventImage = document.getElementById('event-image');
+            const eventDescription = document.getElementById('event-description');
+
+            // Assuming data attributes for event details
+            eventImage.src = this.getAttribute('data-image');
+            eventDescription.textContent = this.getAttribute('data-description');
+
+            eventDetails.style.display = 'block';
+            overlay.classList.add('active');
+        });
+    });
+
+    closeEventDetailsButton.addEventListener('click', function() {
         eventDetails.style.display = 'none';
+        overlay.classList.remove('active');
+    });
+
+    overlay.addEventListener('click', function() {
+        eventDetails.style.display = 'none';
+        overlay.classList.remove('active');
     });
 });
