@@ -87,6 +87,11 @@ body {
     align-items: center;
 }
 
+.navbar-logo {
+    width: 5.5rem;
+    height: 2.5rem;
+    margin-right: 0.625rem;
+}
 .navbar-links {
     list-style: none;
     display: flex;
@@ -100,6 +105,46 @@ body {
 .navbar-links a {
     text-decoration: none;
     color: inherit;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropbtn {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    margin-top: 0.5rem;
+    display: none;
+    position: absolute;
+    min-width: 7rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #3fd5ff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #12aef1;
 }
 
 .content {
@@ -124,7 +169,7 @@ body {
     text-align: left;
     padding-top: 12.5rem;
 }
-
+    
 .welcome-section h5 {
     color: #c2bfd0;
     font-size: 1.125rem;
@@ -145,8 +190,9 @@ body {
 
 .welcome-image {
     flex: 1;
-    max-width: 37.5rem; /* 600px in rem */
-    max-height: 25rem; /* 400px in rem */
+    margin-top: 10rem;
+    max-width: 56rem; /* 40rem * 1.4 */
+    max-height: 35rem; /* 25rem * 1.4 */
 }
 
 .welcome-image img {
@@ -187,17 +233,33 @@ button:active {
 }
 
 .about-us-section {
-    padding: 25rem 1.25rem; 
+    padding: 2.5rem 1.25rem;
+    margin-top: 4rem; 
     color: #ffffff;
     text-align: center;
 }
 
 .about-us-section h2 {
     font-size: 2.25rem; 
-    margin-bottom: 1.25rem; 
 }
 
 .about-us-section p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.why-we-exist-section {
+    padding: 5rem 1.25rem; 
+    color: #ffffff;
+    text-align: center;
+}
+
+.why-we-exist-section h2 {
+    font-size: 2.25rem; 
+    margin-bottom: 1.25rem; 
+}
+
+.why-we-exist-section p {
     font-size: 1.125rem;
     line-height: 1.6;
 }
@@ -216,6 +278,13 @@ button:active {
 .meet-our-members-section label {
     font-size: 1.125rem; 
     margin-right: 0.625rem; 
+}
+
+.meet-our-members-section .member-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #ccc;
 }
 
 .meet-our-members-section select {
@@ -242,15 +311,38 @@ button:active {
     margin: 3.125rem 0;
 }
 
+.member-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+    margin: 1.25rem 0; 
+}
+
+.member-row h2 {
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.member-row .members {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap; 
+}
+
 .member {
-    text-align: center;
-    margin: 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem; 
 }
 
 .member img {
-    width: 9.375rem; 
-    height: 9.375rem; 
-    border-radius: 50%;
+    width: 12.1875rem; 
+    height: 15.6rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
 }
 
@@ -259,17 +351,6 @@ button:active {
     font-size: 1.125rem; 
     font-weight: bold;
     color: #ffffff;
-}
-
-.member-row {
-    display: flex;
-    justify-content: center;
-    gap: 2.5rem;
-    margin: 1.25rem 0; 
-}
-
-.member-row .member {
-    margin: 0;
 }
 
 .footer {

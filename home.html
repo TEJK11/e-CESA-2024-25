@@ -6,19 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-CESA Website</title>
     <link rel="stylesheet" href="home.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" sizes="32x32">
+    <link rel="manifest" href="home.json" />
     <script src="home.js"></script>
 </head>
 <body>
     <div class="navbar-container">
         <nav>
             <div class="navbar-title">
-                <h1>E-CESA</h1>
+                <img src="/images/logo.jpg" alt="E-CESA Logo" class="navbar-logo" href="home.html">
                 <ul class="navbar-links">
                     <li><a href="/home.html">Home</a></li>
                     <li><a href="/events.html">Events</a></li>
                     <li><a href="/contact.html">Contact us</a></li>
-                    <li><a href="#">NoteMate<sup>®</sup></a></li>                
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Notemate<sup>®</sup></a>
+                        <div class="dropdown-content">
+                            <a href="#">FY</a>
+                            <a href="#">SY</a>
+                        </div>
+                    </li>               
                 </ul>
             </div>
         </nav>
@@ -26,13 +33,13 @@
     <div class="content">
         <div class="welcome-section">
             <div class="welcome-text">
-                <h5>Welcome</h5>
+                <h5>Hello there ;)</h5>
                 <h1>Welcome to,<br> e-CESA KJSCE</h1>
-                <p>Your one stop for all resources and notes :)</p>
+                <p>Our official council website and a little something for learners :)</p>
                 <button onclick="location.href='#about-us'">Explore</button>
             </div>
             <div class="welcome-image">
-                <img src="path/to/your/image.jpg" alt="Welcome Image">
+                <img src="\images\eseca.JPG" alt="Welcome Image">
             </div>
         </div>
     </div>
@@ -41,7 +48,9 @@
         <p>Electronics and Computer Engineering Students’ Association (E-CESA) established in 1995, is a crucible where innovation meets mentorship and serves as a vibrant platform for students to engage with the latest technological advancements and industry practices. Our mission is to ignite passion and curiosity in electronics and computer engineering through a diverse range of activities. From organizing workshops on cutting-edge technologies like Raspberry Pi to hosting technical talks with industry professionals, our aim is to be a catalyst for transformation, guiding minds and shaping futures. 
             Beyond our commitment to technical excellence, we are deeply invested in social responsibility, participating in initiatives that make a meaningful impact on our community. Our annual technical magazine, Periscope, is a testament to our dedication, offering insights into the latest technological advancements, interviews with industry leaders, and thought-provoking articles.
             In the story of our existence, we aim to be the halos that can pinpoint the million little threads causing a giant knot and guide all to understand how to pull them out.</p>
-            <h2>Why we exist</h2>
+    </div>
+    <div id="why-we-exist" class="why-we-exist-section">
+        <h2>Why we exist</h2>
         <p>At e-CESA, we believe in the power of hands-on learning and collaboration. Our events, which include project competitions, technical seminars, and interactive sessions, provide valuable opportunities for students to apply their skills and explore potential career paths. In addition to technical activities, we are committed to social responsibility and actively participate in initiatives that benefit our community.
             Our annual technical magazine, Periscope, showcases the latest in technology, interviews with industry experts, and insightful articles, reflecting our commitment to keeping our members informed and engaged with the tech world.
             Being a part of e-CESA means more than just participating in events; it’s about gaining essential skills, broadening your knowledge base, and developing leadership and team management capabilities. Join us to be a part of a thriving community that values innovation, learning, and making a positive impact.</p>
@@ -51,7 +60,7 @@
         <label for="year-select">Select Year:</label>
         <select id="year-select" name="year-select" onchange="updateDescription()">
             <option value="24-25">24-25</option>
-            <option value="23-24">23-24</option>
+            <!--<option value="23-24">23-24</option>
             <option value="22-23">22-23</option>
             <option value="21-22">21-22</option>
             <option value="20-21">20-21</option>
@@ -59,149 +68,168 @@
             <option value="18-19">18-19</option>
             <option value="17-18">17-18</option>
             <option value="16-17">16-17</option>
-            <option value="15-16">15-16</option>
+            <option value="15-16">15-16</option>-->
         </select>
         <div id="description" class="description">
             <div id="24-25">
                 <div class="council-members">
+                    <div class="member-row">
+                        <h2>Core Team</h2>
+                    </div>
                     <div class="member general-secretary">
-                        <img src="path/to/joint-secretary1.jpg" alt="General Secretary">
-                        <p>General Secretary </p>
-                        <p>Pratham Chintrate </p>
+                        <img src="\Photos of member\IMG-20240813-WA0018.jpg" alt="General Secretary">
+                        <p>General Secretary</p>
+                        <p class="member-name">Pratham Chintrate</p>
                     </div>
                     <div class="member-row">
                         <div class="member joint-secretary">
-                            <img src="path/to/joint-secretary1.jpg" alt="Joint Secretary">
+                            <img src="\Photos of member\IMG_8059.PNG" alt="Joint Secretary">
                             <p>Joint General Secretary</p>
-                            <p> Arpita singh</p>
+                            <p class="member-name">Arpita Singh</p>
                         </div>
                         <div class="member joint-secretary">
-                            <img src="path/to/joint-secretary2.jpg" alt="Joint Secretary">
+                            <img src="\Photos of member\PXL_20240605_032255564.jpg" alt="Joint Secretary">
                             <p>Joint General Secretary</p>
-                            <p>Soumya Bokare</p>
+                            <p class="member-name">Soumya Bokare</p>
                         </div>
-                    </div>
                     </div>
                     <div class="member treasurer">
-                        <img src="path/to/treasurer.jpg" alt="Treasurer">
+                        <img src="\Photos of member\IMG_1316.jpg" alt="Treasurer">
                         <p>Treasurer</p>
-                        <p>Hrishikesh Chanekar</p>
+                        <p class="member-name">Hrishikesh Chanekar</p>
                     </div>
                     <div class="member-row">
-                        <div class="member tech-head">
-                            <img src="path/to/tech-head1.jpg" alt="Tech Head">
-                            <p>Tech Head</p>
-                            <p>Hrishikesh Chanekar</p>
-                        </div>
-                        <div class="member tech-head">
-                            <img src="path/to/tech-head2.jpg" alt="Tech Head">
-                            <p>Tech Head</p>
-                            <p>Hrishikesh Chanekar</p>
-                        </div>
-                        <div class="member tech-head">
-                            <img src="path/to/tech-head3.jpg" alt="Tech Head">
-                            <p>Tech Head</p>
-                            <p>Hrishikesh Chanekar</p>
+                        <h2>Tech Team</h2>
+                    </div>
+                    <div class="member-row">
+                        <div class="members">
+                            <div class="member tech-head">
+                                <img src="\Photos of member\IMG_6921.png" alt="Tech Head">
+                                <p>Tech Head</p>
+                                <p class="member-name">Miten Bhandari</p>
+                            </div>
+                            <div class="member tech-head">
+                                <img src="\Photos of member\IMG-20240318-WA0255.jpg" alt="Tech Head">
+                                <p>Tech Head</p>
+                                <p class="member-name">Tejas Kamath</p>
+                            </div>
+                            <div class="member tech-head">
+                                <img src="\Photos of member\WhatsApp Image 2024-08-08 at 23.19.49_dc38f40a.jpg" alt="Tech Head">
+                                <p>Tech Head</p>
+                                <p class="member-name">Piyush Tyagi</p>
+                            </div>
                         </div>
                     </div>
                     <div class="member-row">
                         <div class="member joint-tech-head">
-                            <img src="path/to/joint-tech-head1.jpg" alt="Joint Tech Head">
+                            <img src="\Photos of member\WhatsApp Image 2024-08-08 at 22.33.04_e721bc67.jpg" alt="Joint Tech Head">
                             <p>Joint Tech Head</p>
-                            <p>Aamir Arsiwala</p>
+                            <p class="member-name">Aamir Arsiwala</p>
                         </div>
                         <div class="member joint-tech-head">
-                            <img src="path/to/joint-tech-head2.jpg" alt="Joint Tech Head">
+                            <img src="\Photos of member\+91 87797 69658 20240809_094844.jpg" alt="Joint Tech Head">
                             <p>Joint Tech Head</p>
-                            <p>Siya Naulakha</p>
+                            <p class="member-name">Siya Naulakha</p>
                         </div>
                     </div>
                     <div class="member-row">
+                        <h2>PR Team</h2>
+                    </div>
+                    <div class="member-row">
                         <div class="member pr-head">
-                            <img src="path/to/pr-head1.jpg" alt="PR Head">
-                            <p>PR Head </p>
-                            <p>Aarohi Dabholkar</p>
+                            <img src="\Photos of member\IMG_8957.JPG" alt="PR Head">
+                            <p>PR Head</p>
+                            <p class="member-name">Aarohi Dabholkar</p>
                         </div>
                         <div class="member pr-head">
-                            <img src="path/to/pr-head2.jpg" alt="PR Head">
-                            <p>PR Head </p>
-                            <p>Aliasgar Attarwala</p>
+                            <img src="\Photos of member\IMG_2243.png" alt="PR Head">
+                            <p>PR Head</p>
+                            <p class="member-name">Aliasgar Attarwala</p>
                         </div>
                     </div>
                     <div class="member-row">
                         <div class="member jt-pr">
-                            <img src="path/to/jt-pr1.jpg" alt="Joint PR">
+                            <img src="\Photos of member\IMG_20230822_004315_863.jpg" alt="Joint PR">
                             <p>Joint PR</p>
-                            <p>Piyush Lomte</p>
+                            <p class="member-name">Piyush Lomte</p>
                         </div>
                         <div class="member jt-pr">
-                            <img src="path/to/jt-pr2.jpg" alt="Joint PR">
+                            <img src="\Photos of member\Screenshot_20240813_011059.jpg" alt="Joint PR">
                             <p>Joint PR</p>
-                            <p>Jaiee Paradkar</p>
+                            <p class="member-name">Jaiee Paradkar</p>
                         </div>
+                    </div>
+                    <div class="member-row">
+                        <h2>Marketing Team</h2>
+                    </div>
+                    <div class="member-row">
+                        <div class="member marketing-head">
+                            <img src="\Photos of member\ac1a65e2-cd1b-4c87-a2a4-d57f397fcefd.jpg" alt="Marketing Head">
+                            <p>Marketing Head</p>
+                            <p class="member-name">Chirayu Tak</p>
                         </div>
-                        <div class="member-row">
-                            <div class="member marketing-head">
-                                <img src="path/to/marketing-head1.jpg" alt="Marketing Head">
-                                <p>Marketing Head</p>
-                                <p>Chirayu tak</p>
-                            </div>
-                            <div class="member marketing-head">
-                                <img src="path/to/marketing-head2.jpg" alt="Marketing Head">
-                                <p>Marketing Head</p>
-                                <p>Takshil sharma</p>
-                            </div>
+                        <div class="member marketing-head">
+                            <img src="\Photos of member\IMG-20240810-WA0000.jpg" alt="Marketing Head">
+                            <p>Marketing Head</p>
+                            <p class="member-name">Takshil Sharma</p>
                         </div>
-                        <div class="member">
-                            <img src="path/to/joint-marketing.jpg" alt="Joint Marketing">
-                            <p>Joint Marketing</p>
-                            <p>Jhanvi Shetty</p>
+                    </div>
+                    <div class="member">
+                        <img src="\Photos of member\c88913eb-f5a4-45c3-bab9-397eb12c6202.jpg" alt="Joint Marketing">
+                        <p>Joint Marketing</p>
+                        <p class="member-name">Jhanvi Shetty</p>
+                    </div>
+                    <div class="member-row">
+                        <h2>Creative Team</h2>
+                    </div>
+                    <div class="member-row">
+                        <div class="member creative-head">
+                            <img src="\Photos of member\default-image.jpg" alt="Creative Head">
+                            <p>Creative Head</p>
+                            <p class="member-name">Purva Bhadawkar</p>
                         </div>
-                        <div class="member-row">
-                            <div class="member creative-head">
-                                <img src="path/to/creative-head1.jpg" alt="Creative Head">
-                                <p>Creative Head</p>
-                                <p>Purva Bhadawkar</p>
-                            </div>
-                            <div class="member creative-head">
-                                <img src="path/to/creative-head2.jpg" alt="Creative Head">
-                                <p>Creative Head</p>
-                                <p>Priyanshu Mishra</p>
-                            </div>
+                        <div class="member creative-head">
+                            <img src="\Photos of member\priyanshu.jpg" alt="Creative Head">
+                            <p>Creative Head</p>
+                            <p class="member-name">Priyanshu Mishra</p>
                         </div>
-                        <div class="member-row">
-                            <div class="member joint-creative-head">
-                                <img src="path/to/joint-creative-head1.jpg" alt="Joint Creative Head">
-                                <p>Joint Creative Head</p>
-                                <p>Arnav Desai</p>
-                            </div>
-                            <div class="member joint-creative-head">
-                                <img src="path/to/joint-creative-head2.jpg" alt="Joint Creative Head">
-                                <p>Joint Creative Head</p>
-                                <p>Swajeet Salvi</p>
-                            </div>
-                            <div class="member joint-creative-head">
-                                <img src="path/to/joint-creative-head3.jpg" alt="Joint Creative Head">
-                                <p>Joint Creative Head</p>
-                                <p>Rishabh karpe</p>
-                            </div>
-                            <div class="member joint-creative-head">
-                                <img src="path/to/joint-creative-head4.jpg" alt="Joint Creative Head">
-                                <p>Joint Creative Head</p>
-                                <p>Ajeet jaiswar</p>
-                            </div>
+                    </div>
+                    <div class="member-row">
+                        <div class="member joint-creative-head">
+                            <img src="\Photos of member\WhatsApp Image 2024-08-09 at 00.32.50.jpeg" alt="Joint Creative Head">
+                            <p>Joint Creative Head</p>
+                            <p class="member-name">Arnav Desai</p>
                         </div>
-                        <div class="member-row">
-                            <div class="member literary-head">
-                                <img src="path/to/literary-head1.jpg" alt="Literary Head">
-                                <p>Literary Head</p>
-                                <p>Arun dange</p>
-                            </div>
-                            <div class="member literary-head">
-                                <img src="path/to/literary-head2.jpg" alt="Literary Head">
-                                <p>Literary Head</p>
-                                <p>Swapnil Ranadive</p>
-                            </div>
+                        <div class="member joint-creative-head">
+                            <img src="\Photos of member\default-image.jpg" alt="Joint Creative Head">
+                            <p>Joint Creative Head</p>
+                            <p class="member-name">Swajeet Salvi</p>
+                        </div>
+                        <div class="member joint-creative-head">
+                            <img src="\Photos of member\default-image.jpg" alt="Joint Creative Head">
+                            <p>Joint Creative Head</p>
+                            <p class="member-name">Rishabh Karpe</p>
+                        </div>
+                        <div class="member joint-creative-head">
+                            <img src="\Photos of member\default-image.jpg" alt="Joint Creative Head">
+                            <p>Joint Creative Head</p>
+                            <p class="member-name">Ajeet Jaiswar</p>
+                        </div>
+                    </div>
+                    <div class="member-row">
+                        <h2>Literary Team</h2>
+                    </div>
+                    <div class="member-row">
+                        <div class="member literary-head">
+                            <img src="\Photos of member\WhatsApp Image 2024-08-08 at 22.48.08_6243a52f.jpg" alt="Literary Head">
+                            <p>Literary Head</p>
+                            <p class="member-name">Arun Dange</p>
+                        </div>
+                        <div class="member literary-head">
+                            <img src="\Photos of member\Screenshot_20240810-002940~2.png" alt="Literary Head">
+                            <p>Literary Head</p>
+                            <p class="member-name">Swapnil Ranadive</p>
+                        </div>
                     </div>
                     </div>
                     </div>
