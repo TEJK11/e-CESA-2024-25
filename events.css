@@ -30,6 +30,8 @@ body {
     align-items: center;
     margin: 0;
     justify-content: space-between;
+    margin-bottom: 100px !important;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
 }
 
 .navbar-title h1 {
@@ -48,6 +50,7 @@ body {
     flex-direction: row !important;
     gap: 1.25rem;
     margin-left: auto;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
 }
 
 .navbar-links li {
@@ -284,4 +287,71 @@ body {
     padding: 0.625rem 0;
     width: 100%;
     bottom: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        margin-left: 0;
+        margin-bottom: 0.625rem;
+    }
+
+    .calendar-container {
+        padding: 0.625rem;
+    }
+
+    .calendar-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .calendar-header select {
+        width: 100%;
+        margin-top: 0.625rem;
+    }
+
+    .calendar {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .event-details {
+        padding: 0.625rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-title h1 {
+        font-size: 1.25rem;
+    }
+
+    .navbar-links a {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
+
+    .calendar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .calendar-day.day-cell {
+        height: 4rem;
+    }
+
+    .event-details p {
+        font-size: 1rem;
+    }
+
+    .close-button {
+        font-size: 1.25rem;
+    }
 }

@@ -41,6 +41,7 @@ body {
     align-items: center;
     margin: 0;
     justify-content: space-between;
+    margin-bottom: 40px !important;
 }
 
 .navbar-title h1 {
@@ -398,4 +399,44 @@ form button:active {
     text-align: center;
     padding: 0.625rem 0;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .navbar-links li {
+        margin-left: 0;
+    }
+
+    .welcome-section {
+        padding: 1rem;
+    }
+
+    .welcome-text h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-text p {
+        font-size: 1rem;
+    }
+
+    .welcome-image {
+        max-width: 100%;
+        max-height: auto;
+    }
+
+    .about-us-section, .why-we-exist-section, .meet-our-members-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .about-us-section h2, .why-we-exist-section h2, .meet-our-members-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .about-us-section p, .why-we-exist-section p, .meet-our-members-section p {
+        font-size: 1rem;
+    }
 }

@@ -6,6 +6,17 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+            publicKey: "hSbvdswraDwpnAg-H",
+        });
+        })();
+    </script>
 </head>
 <body>
     <div class="navbar-container">
@@ -36,7 +47,6 @@
                         <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/ecesa_kjsce/"> Instagram</a></li>
                         <li><i class="fas fa-envelope"></i><a href="mailto:example@gmail.com"> Gmail</a></li>
                         <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/company/e-cesakjsce/?originalSubdomain=in"> LinkedIn</a></li>
-                        <!-- <li><i class="fab fa-github"></i><a href="https://github.com"> GitHub</a></li> -->
                     </ul>
                     <a href="./home.html"><button class="submit exit" >Exit</button></a>
                 </div>
@@ -65,5 +75,24 @@
         <p>e-CESA KJSCE ❤️</p>
         <p>&copy; 2024-25 e-CESA. All rights reserved.</p>
     </footer>
+
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("hSbvdswraDwpnAg-H");
+        })();
+
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            emailjs.sendForm('service_eyml65i', 'template_twjg1vd', this)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Your message has been sent!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Oops... Something went wrong.');
+                });
+        });
+    </script>
 </body>
 </html>

@@ -4,10 +4,11 @@ body {
     margin: 0;
     height: 100vh;
     font-family: 'Kanit', sans-serif;
-    background: linear-gradient(to right, #1b77a1, #2044e4, #170f4f, #8114e8);
+    background: linear-gradient(to right, #1b77a1,#072c88, #2023e4, #271985,#2d0b65, #8114e8);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
     color: #ffffff; 
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 @keyframes gradientAnimation {
@@ -30,6 +31,7 @@ body {
     align-items: center;
     margin: 0;
     justify-content: space-between;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 .navbar-title h1 {
@@ -92,20 +94,6 @@ body {
     height: 2.5rem;
     margin-right: 0.625rem;
 }
-.navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 1.25rem;
-}
-
-.navbar-links li {
-    display: inline;
-}
-
-.navbar-links a {
-    text-decoration: none;
-    color: inherit;
-}
 
 .dropdown {
     display: inline-block;
@@ -152,6 +140,7 @@ body {
     text-align: center;
     font-size: 1.125rem;
     line-height: 1.6;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 .welcome-section {
@@ -161,6 +150,7 @@ body {
     max-width: 75rem;
     margin: 2.5rem auto;
     padding: 0 1.25rem;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 .welcome-text {
@@ -237,6 +227,7 @@ button:active {
     margin-top: 4rem; 
     color: #ffffff;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 .about-us-section h2 {
@@ -252,6 +243,7 @@ button:active {
     padding: 5rem 1.25rem; 
     color: #ffffff;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 .why-we-exist-section h2 {
@@ -268,6 +260,7 @@ button:active {
     padding: 2.5rem 1.25rem; 
     color: #ffffff;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 .meet-our-members-section h2 {
@@ -317,6 +310,11 @@ button:active {
     align-items: center;
     gap: 2.5rem;
     margin: 1.25rem 0; 
+    flex-wrap: wrap; /* Ensure rows wrap on smaller screens */
+}
+
+.navbar-container, .content, .about-us-section, .why-we-exist-section, .meet-our-members-section, .footer {
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 .member-row h2 {
@@ -359,4 +357,123 @@ button:active {
     padding: 0.625rem 0; 
     width: 100%;
     bottom: 0;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .welcome-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome-text {
+        margin-right: 0;
+        padding-top: 2rem;
+    }
+
+    .welcome-image {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .navbar-links li {
+        margin-left: 0;
+    }
+
+    .welcome-section {
+        padding: 1rem;
+    }
+
+    .welcome-text h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-text p {
+        font-size: 1rem;
+    }
+
+    .welcome-image {
+        max-width: 100%;
+        max-height: auto;
+    }
+
+    .about-us-section, .why-we-exist-section, .meet-our-members-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .about-us-section h2, .why-we-exist-section h2, .meet-our-members-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .about-us-section p, .why-we-exist-section p, .meet-our-members-section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-title {
+        margin-bottom: 1rem;
+    }
+
+    .navbar-logo {
+        width: 4rem;
+        height: 2rem;
+    }
+
+    .dropbtn {
+        padding: 10px 12px;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .welcome-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-text p {
+        font-size: 0.875rem;
+    }
+
+    .welcome-image {
+        margin-top: 1rem;
+    }
+
+    .about-us-section, .why-we-exist-section, .meet-our-members-section {
+        padding: 1rem;
+    }
+
+    .about-us-section h2, .why-we-exist-section h2, .meet-our-members-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-us-section p, .why-we-exist-section p, .meet-our-members-section p {
+        font-size: 0.875rem;
+    }
+
+    .meet-our-members-section select {
+        width: 80%;
+    }
+
+    .navbar-links {
+        width: 100%;
+    }
+
+    .navbar-links a {
+        text-align: center;
+        width: 100%;
+    }
 }
