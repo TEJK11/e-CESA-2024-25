@@ -34,17 +34,13 @@ function updateCalendar() {
 
     // Sample Events Data
     const events = {
-        "2024-10-10": {
-            image: "https://via.placeholder.com/600x400?text=Event+1",
-            description: "Join us for an exciting workshop on AI and Machine Learning. Explore the latest trends and innovations in the field."
-        },
         "2024-08-20": {
-            image: "https://via.placeholder.com/600x400?text=Event+2",
-            description: "Participate in our annual hackathon! Team up, code, and compete for exciting prizes."
+            image: "../photos/handoverCeremony.png",
+            description: "Join us for the handover ceremony marking the transfer of councils and the formation of the new council."
         },
-        "2024-08-31": {
+        "2024-09-02": {
             image: "https://via.placeholder.com/600x400?text=Event+3",
-            description: "Attend the keynote session on the future of technology with renowned industry leaders."
+            description: "Explore our roadmap for navigating your BTech journey, from core courses to key milestones and basic steps towards career planning."
         },
         "2024-09-05": {
             image: "https://via.placeholder.com/600x400?text=Event+4",
@@ -60,7 +56,8 @@ function updateCalendar() {
         const dateKey = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
         if (events[dateKey]) {
             dayCell.classList.add('event');
-            dayCell.setAttribute('data-event', 'Event');
+            dayCell.setAttribute('data-image', events[dateKey].image);
+            dayCell.setAttribute('data-description', events[dateKey].description);
             dayCell.addEventListener('click', function() {
                 showEventDetails(events[dateKey].image, events[dateKey].description);
             });
@@ -70,26 +67,25 @@ function updateCalendar() {
     }
 }
 
+function showEventDetails(image, description) {
+    const eventDetails = document.getElementById('event-details');
+    const eventImage = document.getElementById('event-image');
+    const eventDescription = document.getElementById('event-description');
+    const overlay = document.querySelector('.overlay');
+
+    eventImage.src = image;
+    eventDescription.textContent = description;
+
+    eventDetails.style.display = 'block';
+    overlay.classList.add('active');
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const eventDetails = document.getElementById('event-details');
     const closeEventDetailsButton = document.getElementById('close-event-details');
     const overlay = document.createElement('div');
     overlay.className = 'overlay';
     document.body.appendChild(overlay);
-
-    document.querySelectorAll('.calendar-day.day-cell').forEach(dayCell => {
-        dayCell.addEventListener('click', function() {
-            const eventImage = document.getElementById('event-image');
-            const eventDescription = document.getElementById('event-description');
-
-            // Assuming data attributes for event details
-            eventImage.src = this.getAttribute('data-image');
-            eventDescription.textContent = this.getAttribute('data-description');
-
-            eventDetails.style.display = 'block';
-            overlay.classList.add('active');
-        });
-    });
 
     closeEventDetailsButton.addEventListener('click', function() {
         eventDetails.style.display = 'none';
